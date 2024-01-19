@@ -39,6 +39,7 @@ class BridgeDataTemplate:
         self.priority_usernames = list(filter(lambda a: a, os.environ.get("HORDE_PRIORITY_USERNAMES", "").split(",")))
         self.max_power = int(os.environ.get("HORDE_MAX_POWER", 8))
         self.max_threads = int(os.environ.get("HORDE_MAX_THREADS", 1))
+        self.max_context_length = int(os.environ.get("HORDE_MAX_CONTEXT_LENGTH", 4096))
         self.queue_size = int(os.environ.get("HORDE_QUEUE_SIZE", 0))
         self.allow_unsafe_ip = os.environ.get("HORDE_ALLOW_UNSAFE_IP", "true") == "true"
         self.require_upfront_kudos = os.environ.get("REQUIRE_UPFRONT_KUDOS", "false") == "true"
