@@ -156,6 +156,7 @@ class StableDiffusionPopper(JobPopper):
             "allow_painting": self.bridge_data.allow_painting,
             "allow_unsafe_ip": self.bridge_data.allow_unsafe_ip,
             "threads": self.bridge_data.max_threads,
+            "context": self.bridge_data.max_context_length,
             "allow_post_processing": self.bridge_data.allow_post_processing,
             "allow_controlnet": self.bridge_data.allow_controlnet,
             "allow_lora": self.bridge_data.allow_lora if self.model_manager.lora.are_downloads_complete() else False,
@@ -219,6 +220,7 @@ class ScribePopper(JobPopper):
             "softprompts": self.bridge_data.softprompts[self.bridge_data.model],
             "bridge_agent": self.BRIDGE_AGENT,
             "threads": self.bridge_data.max_threads,
+            "context": self.bridge_data.max_context_length,
         }
 
     def horde_pop(self):
@@ -251,6 +253,7 @@ class InterrogationPopper(JobPopper):
             "amount": amount,
             "priority_usernames": self.bridge_data.priority_usernames,
             "threads": self.bridge_data.max_threads,
+            "context": self.bridge_data.max_context_length,
             "bridge_version": BRIDGE_VERSION,
             "bridge_agent": self.BRIDGE_AGENT,
             "max_tiles": self.bridge_data.max_power,
