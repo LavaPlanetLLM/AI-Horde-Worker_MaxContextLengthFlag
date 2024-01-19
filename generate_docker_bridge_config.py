@@ -57,6 +57,7 @@ config = {
     "api_key": os.getenv("HORDE_API_KEY", "0000000000"),
     "priority_usernames": get_list_environment_variable("HORDE_PRIORITY_USERNAMES"),
     "max_threads": get_int_env("HORDE_MAX_THREADS", "1"),
+    "max_context_length": get_int_env("HORDE_MAX_CONTEXT_LENGTH", "4096")
     "queue_size": get_int_env("HORDE_QUEUE_SIZE", "0"),
     "require_upfront_kudos": get_bool_env("HORDE_REQUIRE_UPFRONT_KUDOS", "false"),
     "max_power": get_int_env("HORDE_MAX_POWER", "8"),
