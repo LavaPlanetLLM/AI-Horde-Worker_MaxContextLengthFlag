@@ -726,6 +726,15 @@ class WebUI:
                         value=config.max_threads,
                         info=self._info("threads"),
                     )
+                    config.default("context", 4096)
+                    max_context_length = gr.slider(
+                        1024,
+                        200000,
+                        step=1024
+                        labal=self._label("max_context_length"),
+                        value=config.max_context_length,
+                        info=self._info("max_context_length"),
+                    )
                     config.default("queue_size", 1)
                     queue_size = gr.Slider(
                         0,
@@ -867,6 +876,7 @@ class WebUI:
                     max_models_to_download,
                     max_power,
                     max_threads,
+                    max_context_length,
                     models_on_disk,
                     models_to_load,
                     models_to_skip,
