@@ -68,6 +68,13 @@ arg_parser.add_argument(
     help="How many threads to use. Min: 1",
 )
 arg_parser.add_argument(
+    "--max_context_length",
+    action="store",
+    required=False,
+    type=int,
+    help="Set the value of the maximum context length the worker will use. 2048, 4096, 8192, etc."
+)
+arg_parser.add_argument(
     "-v",
     "--verbosity",
     action="count",
