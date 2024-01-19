@@ -159,6 +159,7 @@ Optional environment variables:
 - HORDE_WORKER_PREFIX: Used in random worker name generation, defaults to DockerWorker ${HORDE_WORKER_PREFIX}#0123097164
 - HORDE_PRIORITY_USERNAMES: A comma-separated list of usernames that should be given priority in the queue.
 - HORDE_MAX_THREADS: The maximum number of threads to use for rendering. Defaults to '1'.
+- HORDE_MAX_CONTEXT_LENGTH: The maximum length for context. Defaults to '4096'.
 - HORDE_QUEUE_SIZE: The maximum number of jobs to queue. Defaults to '0', meaning no limit.
 - HORDE_REQUIRE_UPFRONT_KUDOS: Whether to require users to have enough kudos before they can submit jobs. Defaults to 'false'.
 - HORDE_MAX_POWER: The maximum power level to use for rendering. Defaults to '8'.
