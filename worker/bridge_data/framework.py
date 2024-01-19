@@ -76,6 +76,8 @@ class BridgeDataTemplate:
             self.priority_usernames = self.args.priority_usernames
         if self.args.max_threads:
             self.max_threads = self.args.max_threads
+        if self.args.max_context_length:
+            self.max_context_length = self.args.max_context_length
         if self.args.queue_size:
             self.queue_size = self.args.queue_size
         if self.args.allow_unsafe_ip:
